@@ -47,7 +47,8 @@ abstract class Key
     }
 
     /**
-     * @return resource
+     * @return resource|\OpenSSLAsymmetricKey Returns a resource for PHP<=7.x and a
+     *                                        \OpenSSLAsymmetricKey for PHP8.0 and higher.
      */
     abstract public function getResource();
 }
