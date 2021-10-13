@@ -13,9 +13,8 @@ namespace Tests\AcmePhp\Ssl;
 
 use AcmePhp\Ssl\Certificate;
 use AcmePhp\Ssl\PublicKey;
-use PHPUnit\Framework\TestCase;
 
-class CertificateTest extends TestCase
+class CertificateTest extends AbstractSslTest
 {
     public function test_getPublicKey_returns_a_PublicKey()
     {
@@ -102,6 +101,6 @@ oVyIb1lpwK0r0vN9y8ns80MP3HtjPYtARWJ9z9P4N+guHZdnbw==
 
         $resource = $certificate->getPublicKeyResource();
 
-        $this->assertIsResource($resource);
+        $this->assertIsAsymmetricKey($resource);
     }
 }
